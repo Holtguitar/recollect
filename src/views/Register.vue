@@ -75,6 +75,7 @@ const loginWithGoogle = () => {
 .form-title {
   font-weight: bold;
   margin: 0;
+  color: rgb(141, 141, 141)
 }
 
 .container {

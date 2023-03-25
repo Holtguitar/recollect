@@ -264,7 +264,7 @@ export default {
       this.fullfront = front;
       this.fullback = back;
       this.fullid = id;
-      console.log(style)
+      // console.log(style)
     }
   },
 }

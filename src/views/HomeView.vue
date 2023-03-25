@@ -78,7 +78,8 @@
 </template>
 
 <script>
-import { getDatabase, set, ref } from '../firebase/firebase'
+// import { getDatabase, set, ref } from '../firebase/firebase'
+import * as dotenv from "dotenv"
 import { RouterLink } from 'vue-router'
 import { Store, useStore } from 'vuex'
 import store from '../store'
@@ -168,7 +169,7 @@ export default {
       )
 
       if (confirmDelete) {
-        const db = getDatabase()
+        const db = dotenv.getDatabase()
         const userID = this.store.state.user.uid
         const path = `cards/${userID}`
         const details = { db, path, userID }
