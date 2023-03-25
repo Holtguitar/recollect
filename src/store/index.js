@@ -9,7 +9,7 @@ import {
   signInWithPopup,
   signOut,
 } from "../firebase/firebase";
-import { getDatabase, ref, set } from '../firebase/firebase';
+import { getDatabase, ref, set } from '../firebase/firebase.js';
 
 
 export default createStore({
