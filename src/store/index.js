@@ -8,8 +8,8 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   signOut,
-} from "../firebase/firebase";
-import { getDatabase, ref, set } from '../firebase/firebase.js';
+} from "../firebase";
+import { getDatabase, ref, set } from '../firebase/index.js';
 
 
 export default createStore({
