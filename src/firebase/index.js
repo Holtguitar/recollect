@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import store from "../store"
+import store from "../store";
+import * as dotenv from "dotenv";
 import { 
     getAuth, 
     setPersistence, 
@@ -21,6 +22,8 @@ import {
   remove,
 } from "@firebase/database";
 
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyBYG43e-GJZGiZcQ7f9ckz31lKx2uIGUmw",
     authDomain: "memorvise.firebaseapp.com",
@@ -30,6 +33,14 @@ const firebaseConfig = {
     messagingSenderId: "1036407656797",
     appId: "1:1036407656797:web:25e9a78566e4873b5018b4",
     measurementId: "G-HE85QZ5SHZ"
+    // apiKey: dotenv.apiKey,
+    // authDomain: dotenv.authDomain,
+    // databaseURL: "https://memorvise-default-rtdb.firebaseio.com",
+    // projectId: "memorvise",
+    // storageBucket: "memorvise.appspot.com",
+    // messagingSenderId: "1036407656797",
+    // appId: "1:1036407656797:web:25e9a78566e4873b5018b4",
+    // measurementId: "G-HE85QZ5SHZ"
 };
 
 const app = initializeApp(firebaseConfig);

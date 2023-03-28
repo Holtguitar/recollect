@@ -1,5 +1,8 @@
 <template>
   <div class="footer-bar">
+    <div class="contact-section">
+      Contact us with any issues or concerns @ doppio.web.designs@gmail.com
+    </div>
     <div class="doppio-section">
       <div class="doppio-text">Powered by © Doppio Web Designs</div>
       <a 
@@ -38,24 +41,26 @@
       height: 70px;
       bottom: 0%;
       left: 0%;
-      background-color: whitesmoke;
+      background-color: rgb(245, 245, 245);
+      display: flex;
+      font-family: 'Short Stack', cursive;
     }
   
     .doppio-section {
       font-size: 13px;
       height: 60px;
-      font-family: 'Short Stack', cursive;
-      width: 400px;
-      height: 100%;
-      left: 40%;
+      
+      left: 30%;
       text-align: center;
       display: flex;
       flex-direction: row;
+      color: black;
     }
 
     .doppio-logo {
-      height: 100%;
-      transform: rotate(19deg)
+      height: 80%;
+      transform: rotate(19deg);
+      top: 10px;
     }
 
     .doppio-text {
@@ -71,6 +76,15 @@
 
     .doppio-link:hover {
       cursor:pointer;
+    }
+
+    .contact-section {
+      position: relative;
+      /* background-color: red; */
+      color: black;
+      width: 600px;
+      left: 10%;
+      top: 10px;
     }
 
     @media (max-width: 900px) and (min-width: 380px){

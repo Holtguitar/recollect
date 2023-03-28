@@ -118,6 +118,7 @@
   </div>
 </template>
 
+
 <script>
 import { getAuth } from '@firebase/auth'
 import { getDatabase, ref, child, push, update, set } from '@firebase/database'
@@ -177,6 +178,16 @@ export default {
     },
   },
   methods: {
+    toggleCardFlippage() {
+      //this.cardOneShow -> controls css class in view associated with display: none
+      // 1. control display none of front/back
+      this.cardOne == 'start' ? (this.cardOne = 'flipped') : (this.cardOne = 'start');
+      this.$nextTick(()=> {
+        // this will fire as soon as all store manipulation "above in this function" is done "derivatively" rendering in "template/html"
+        //2. apply the css class here, that has flipping css animation associated with it
+        // this.cardShowAnimation -> controls css class in view associated with css animation
+      });
+    },
     changeCardColor() {
       this.colorsEdit = `background-color: ${this.cardColorEdit}; color: ${this.textColorEdit}`
     },
@@ -303,6 +314,18 @@ export default {
   backface-visibility: hidden;
   padding: 15px;
   overflow-y: scroll;
+}
+
+.card__face--back {
+  pointer-events: none;
+}
+
+.flipme .card__face--back {
+  pointer-events: auto;
+}
+
+.flipme .card__face--front {
+  pointer-events: none;
 }
 
 .card-face::-webkit-scrollbar {

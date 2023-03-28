@@ -62,7 +62,7 @@ export default createStore({
         SET_CURRENT_CARD(state, index){
           state.currentCard = [];
           state.currentCard.push(state.cards[index + 1])
-        }
+        },
     },
     actions: {
 ////////////////////ACCOUNT AND USER MANAGEMENT///////////////////////////////////

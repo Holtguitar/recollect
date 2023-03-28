@@ -1,5 +1,7 @@
 <template>
+  <!-- If user is logged in -->
   <div class="contain" v-if="store.state.user">
+    <!-- Display summary of user account -->
     <div class="account-info">
       <span class="account-info-header">
         <u>Account Info</u>
@@ -38,6 +40,7 @@
         </div>
       </div>
     </div>
+    <!-- Used to display and delete current user's subjects -->
     <div class="subject-editor">
       <h1>
         Topics
@@ -62,6 +65,7 @@
       </div>
     </div>
   </div>
+  <!-- Landing page for non-user  -->
   <div v-else class="welcome-page">
     <h2 class="welcome-title">Recollect</h2>
     <div class="welcome-message">A Key Tool For Your Learning Journey</div>
@@ -206,7 +210,8 @@ export default {
   font-weight: bolder;
   top: 25%;
   border-radius: 5%;
-  background-color: #0bd692;
+  /* background-color: #0bd692; */
+  background-color: #107a57;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   padding: 35px;
   margin: 20px;
@@ -337,7 +342,8 @@ export default {
   font-weight: bolder;
   top: 25%;
   border-radius: 5%;
-  background-color: #0bd692;
+  /* background-color: #0bd692; */
+  background-color: #107a57;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   padding: 35px;
   margin: 20px;
@@ -369,7 +375,7 @@ export default {
 }
 
 hr {
-  background-color: black;
+  background-color: #d2d8d6;
   border: none;
   height: 1px;
 }

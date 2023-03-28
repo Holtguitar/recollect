@@ -29,6 +29,10 @@ body {
   overscroll-behavior-y: none ;
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
+
 
 @media (hover: hover) {
   a:hover {

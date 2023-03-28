@@ -1,7 +1,7 @@
 <template>
   <nav>
     <nav class="nav-bar">
-      <router-link id="mobile-logo" to="/">Recollect</router-link>
+      <router-link id="mobile-logo" to="/" v-if="currentRoute === 'sign-in'">Recollect</router-link>
       <router-link
         class="nav-item"
         id="home"
@@ -48,6 +48,7 @@
 </template>
 
 <script>
+import { getCurrentInstance } from 'vue';
 import { useStore } from 'vuex'
 
 export default {
@@ -60,7 +61,14 @@ export default {
     handleSignOut() {
       this.store.dispatch('logout')
     },
+
   },
+  computed: {
+    currentRoute(){
+      let route = this.$router.currentRoute.value.name
+      return route
+    }
+  }
 }
 </script>
 
@@ -121,10 +129,8 @@ export default {
 #sign-out,
 #sign-in {
   position: absolute;
-  margin-right: 30px;
-  padding: 5px;
-  top: 20%;
   left: 80%;
+  /* top: 55%; */
   height: 60px;
   border: none;
   background-color: transparent;
@@ -132,6 +138,7 @@ export default {
   color: rgb(16, 122, 87);
   font-weight: 400;
   font-family: 'Merienda One', cursive;
+  font-size: 20px;
   --c: rgb(16, 122, 87); /* the border color */
   --b: 3px; /* the border thickness*/
   --g: 5px; /* the gap on hover */

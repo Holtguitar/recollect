@@ -15,7 +15,7 @@
                 <p><input type="text" v-model="back" placeholder="Back" required :disabled="memFilter"/></p>
                 <p class="mem-container">
                     <label class="mem-label" for="mem-filter">Recollect Filtering Tool</label>
-                    <img src="/question-mark.png" class="question-mark-icon" @click.prevent="toggleShowModal()"/>
+                    <!-- <img src="/question-mark.png" class="question-mark-icon" @click.prevent="toggleShowModal()"/> -->
                     <input type="checkbox" id="mem-filter" @click="toggleMemFilter()"/>
                 </p>
                 <button class="create-button" @click.prevent="createCard()">Build</button>
@@ -256,7 +256,8 @@
         display: flex;
         flex-direction: column;
         border-radius: 15px;
-        background-color:#0bd692;
+        /* background-color:#0bd692; */
+        background-color: #107a57;
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
         0 10px 10px rgba(0,0,0,0.22);
         padding: 35px;
@@ -308,8 +309,8 @@
 
     .color-form-span {
         position: absolute;
-        background-color: rgb(81, 121, 253);
-        color:rgb(2, 2, 101);
+        background-color: rgb(32, 47, 100);
+        color:rgb(194, 194, 194);
         border-radius: 200px 15px 15px 200px;
         width: 150px;
         height: 300px;
@@ -558,7 +559,8 @@
             border-radius: 15px;
             box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
             0 10px 10px rgba(0,0,0,0.22);
-            background-color:#0bd692;
+            /* background-color:#0bd692; */
+            background-color: #107a57;
             text-align: center;
         }
 

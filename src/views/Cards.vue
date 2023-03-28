@@ -195,7 +195,8 @@ export default {
   height: 100px;
   width: 250px;
   border-radius: 5%;
-  background-color: rgb(11, 214, 146);
+  /* background-color: rgb(11, 214, 146); */
+  background-color: #107a57;
   left: 40%;
   top: 12%;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
