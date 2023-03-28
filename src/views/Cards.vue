@@ -354,7 +354,7 @@ input:checked + .slider:before {
   .card-scroll {
     position: fixed;
     grid-template-columns: auto;
-    top: 23%;
+    top: 26%;
     height: 75vh;
     padding-left: 0%;
     left: 0%;

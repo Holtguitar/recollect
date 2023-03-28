@@ -593,7 +593,7 @@
             transform-style: preserve-3d;
             position: relative;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            /* display: none; */
+            display: none;
             top: 15%;
             left: 8.5%;
             
@@ -637,13 +637,14 @@
             
             top: 20%;
             left: 40%;
-            /* display: none; */
+            display: none;
         }
 
         .card-creator .card-controller {
             left: 45%;
             top: 10%;
             padding: 5px;
+            display: none;
         }
     
   }
