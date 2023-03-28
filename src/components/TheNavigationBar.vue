@@ -130,7 +130,6 @@ export default {
 #sign-in {
   position: absolute;
   left: 80%;
-  /* top: 55%; */
   height: 60px;
   border: none;
   background-color: transparent;
@@ -175,7 +174,7 @@ export default {
   background-color: transparent;
 }
 
-@media (max-width: 900px) and (min-width: 380px) {
+@media (max-width: 900px) and (min-width: 350px) {
   .nav-bar {
     text-align: center;
     justify-content: flex-start;
@@ -220,10 +219,9 @@ export default {
 
   #sign-out {
     width: 60px;
-    left: 75%;
+    left: 80%;
+    top: 20%;
   }
 }
 
-@media (max-width: 300px) {
-}
 </style>

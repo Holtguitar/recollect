@@ -245,7 +245,7 @@ const loginWithGoogle = () => {
   box-shadow: 0 14px 28px rgba(20, 20, 20, 0.25);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) and (min-width: 350px){
   #logo {
     display: block;
     font-size: 18px;
@@ -292,8 +292,5 @@ const loginWithGoogle = () => {
   .google__sign-in {
     width: 150px;
   }
-}
-
-@media (max-width: 300px) {
 }
 </style>

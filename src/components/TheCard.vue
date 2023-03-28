@@ -520,7 +520,7 @@ export default {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.22);
 }
 
-@media (max-width: 900px) and (min-width: 380px) {
+@media (max-width: 900px) and (min-width: 350px) {
   /* --------CARD STYLE------------ */
   .card {
     width: 300px;
@@ -550,9 +550,9 @@ export default {
   }
 
   .card-controller {
-    position: fixed;
-    top: 100%;
-    margin-top: 15px;
+    /* position: fixed; */
+    /* top: 100%; */
+    /* margin-top: 15px; */
     width: 200px;
     left: 25%;
   }
@@ -584,13 +584,13 @@ export default {
 
   .text-image,
   .text-color-picker {
-    left: 35%;
+    left: 38%;
     margin-top: 5px;
   }
 
   .cards-image,
   .card-color-picker {
-    left: 47%;
+    left: 49%;
     margin-top: 7px;
   }
 

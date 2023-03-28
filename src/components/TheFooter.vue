@@ -87,18 +87,23 @@
       top: 10px;
     }
 
-    @media (max-width: 900px) and (min-width: 380px){
+    @media (max-width: 900px) and (min-width: 350px){
 
       .footer-bar {
-        height: 45px;
+        /* height: 45px; */
       }
 
       .doppio-section {
-        left: 7%;
+        /* left: 7%; */
+        left: 5%;
       }
 
       .doppio-link {
-        left: 1%;
+        /* left: 1%; */
+      }
+
+      .contact-section {
+        display: none;
       }
     }  
   </style>

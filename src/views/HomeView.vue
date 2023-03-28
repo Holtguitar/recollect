@@ -386,7 +386,7 @@ hr {
   margin-left: 15px;
 }
 
-@media (max-width: 900px) and (min-width: 380px) {
+@media (max-width: 900px) and (min-width: 350px) {
   .account-info {
     width: 270px;
     height: 250px;

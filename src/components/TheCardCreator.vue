@@ -15,6 +15,7 @@
                 <p><input type="text" v-model="back" placeholder="Back" required :disabled="memFilter"/></p>
                 <p class="mem-container">
                     <label class="mem-label" for="mem-filter">Recollect Filtering Tool</label>
+                    <br/>
                     <!-- <img src="/question-mark.png" class="question-mark-icon" @click.prevent="toggleShowModal()"/> -->
                     <input type="checkbox" id="mem-filter" @click="toggleMemFilter()"/>
                 </p>
@@ -481,7 +482,7 @@
     transform: rotateY(180deg);
   }
 
-  @media (max-width: 900px) and (min-width: 380px) {
+  @media (max-width: 900px) and (min-width: 350px) {
         .card-creator {
             position: fixed;
             display: block;
@@ -586,13 +587,15 @@
         }
         
         .card-creator .card {
-            width: 100%;
-            height: 100%;
+            width: 70%;
+            height: 70%;
             transition: transform 1s;
             transform-style: preserve-3d;
             position: relative;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            display: none;
+            /* display: none; */
+            top: 15%;
+            left: 8.5%;
             
         }
         
@@ -629,8 +632,12 @@
         }
 
         .card-creator .rotate-image-icon {
+            position: fixed;
             width: 35px;
-            display: none;
+            
+            top: 20%;
+            left: 40%;
+            /* display: none; */
         }
 
         .card-creator .card-controller {
