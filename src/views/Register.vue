@@ -87,8 +87,9 @@ const loginWithGoogle = () => {
 .login-button,
 .register-button {
   border-radius: 20px;
-  border: 1px solid #0b1ec8;
-  background-color: #2f21eb;
+  border: 1px solid #107a57;
+  background: -webkit-linear-gradient(to right, #107a57, #0b7753, #148b63, #285f4d);
+  background: linear-gradient(to right, #107a57, #0b7753, #148b63, #285f4d);
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -120,7 +121,8 @@ const loginWithGoogle = () => {
 }
 
 .container form {
-  background-color: #ffffff;
+  background: -webkit-linear-gradient(to right, #dddddd, #dfdada, #e4dcdc, #e2e0e0);
+  background: linear-gradient(to right, #f5f5f5, #f5f5f5, #f5f5f5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,7 +133,7 @@ const loginWithGoogle = () => {
 }
 
 .container input {
-  background-color: #eee;
+  background-color: rgb(255, 255, 255);
   border: none;
   padding: 12px 15px;
   margin: 8px 0;
@@ -154,6 +156,10 @@ const loginWithGoogle = () => {
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
+}
+
+.google__sign-in {
+  filter: brightness(98%);
 }
 
 .sign-in-container {
@@ -181,9 +187,9 @@ const loginWithGoogle = () => {
 }
 
 .overlay {
-  background: #05740e;
-  background: -webkit-linear-gradient(to right, #2f21eb, #2f21eb);
-  background: linear-gradient(to right, #2f21eb, #2f21eb);
+ /* background-color: #107a57; */
+  background: -webkit-linear-gradient(to right, #107a57, #0b7753, #148b63, #285f4d);
+  background: linear-gradient(to right, #107a57, #0b7753, #148b63, #285f4d);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
