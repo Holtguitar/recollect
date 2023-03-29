@@ -596,7 +596,6 @@
             display: none;
             top: 15%;
             left: 8.5%;
-            
         }
         
         .card-creator .card__face {

@@ -33,6 +33,8 @@
       :front="result.front"
       :back="result.back"
       :colors="result.colors"
+      :textColor="result.textColor"
+      :cardColor="result.cardColor"
     ></the-card>
   </div>
   <!-- If Slide Mode On -->

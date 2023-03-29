@@ -278,7 +278,7 @@ export default createStore({
           dispatch("loadSubjects")
           commit("SET_CARDS", newCardArr);
         },
-        async editCard({commit, dispatch, state}, details) {
+        async editCard({commit, state}, details) {
           const oldCard = details.id;
           let newCard = null;
           const currSubject = state.subject;
@@ -287,7 +287,6 @@ export default createStore({
           const newCardArr = [];
 
           await set(ref(details.db, details.path), {
-            key: null,
             id: null,
             subject: null,
             email: null,
@@ -339,10 +338,9 @@ export default createStore({
               this.error = error;
               alert(error);
             });
-        },
-        getCardStyle(id){
 
-        }
+          this.dispatch("loadCards")
+        },
     },
     getters: {
       getSubject: state => {

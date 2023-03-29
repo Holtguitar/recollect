@@ -5,9 +5,7 @@
       class="card"
       v-bind:class="{ flipme: cardOne == 'flipped' }"
       :style="this.cardStyle"
-      @click="fullFiew(
-        {subject}, {email}, {front}, {back}, {id}, {colors}
-      )"
+      @click="getInfo($event)"
     >
       <div class="card__face card__face--front">
         <div v-if="(this.front.length < 100)" class="front-details">
@@ -22,7 +20,7 @@
         <div v-else class="back-details-long">{{ back }}</div>
       </div>
     </div>
-    <div class="card-controller">
+    <div class="card-controller" id={{id}}>
       <img
         src="\rotate-icon.png"
         class="rotate-image-icon"
@@ -47,8 +45,7 @@
       </div>
     </div>
   </div>
-  <!-- Full View -->
-  <!-- Full View with Edit View -->
+  <!-- Edit View -->
   <div v-else class="scene scene--card">
     <div
       class="card"
@@ -87,8 +84,8 @@
         <input
           type="color"
           class="text-color-picker"
-          v-model="this.textColorEdit"
-          v-on:change="changeTextColor()"
+          id="text-color-picker"
+          @change="this.changeTextColor()"
         />
       </div>
       <div class="card-color-edit">
@@ -96,8 +93,8 @@
         <input
           type="color"
           class="card-color-picker"
-          v-model="this.cardColorEdit"
-          v-on:change="changeCardColor()"
+          id="card-color-picker"
+          @change="this.changeCardColor()"
         />
       </div>
       <div>
@@ -128,12 +125,10 @@ export default {
   props: [
     'subject',
     'email',
-    'key',
     'front',
     'back',
     'id',
     'colors',
-    'display',
     'textColor',
     'cardColor'
   ],
@@ -145,18 +140,16 @@ export default {
       user: getAuth(),
       store: useStore(),
       editMode: false,
-      keyEdit: null,
       idEdit: null,
       subjectEdit: null,
       emailEdit: null,
       frontEdit: null,
       backEdit: null,
-      textColorEdit: this.textColor,
-      cardColorEdit: this.cardColor,
-      colorsEdit: `background-color: ${this.cardColorEdit}; color: ${this.textColorEdit}`,
+      textColorEdit: null,
+      cardColorEdit: null,
+      colorsEdit: null,
       fullsubject: null,
       fullemail: null,
-      fullkey: null,
       fullfront: null,
       fullback: null,
       fullid: null,
@@ -178,18 +171,16 @@ export default {
     },
   },
   methods: {
-    toggleCardFlippage() {
-      //this.cardOneShow -> controls css class in view associated with display: none
-      // 1. control display none of front/back
-      this.cardOne == 'start' ? (this.cardOne = 'flipped') : (this.cardOne = 'start');
-      this.$nextTick(()=> {
-        // this will fire as soon as all store manipulation "above in this function" is done "derivatively" rendering in "template/html"
-        //2. apply the css class here, that has flipping css animation associated with it
-        // this.cardShowAnimation -> controls css class in view associated with css animation
-      });
+    getInfo(e){
+      console.log(e.target.__vueParentComponent.props)
     },
     changeCardColor() {
-      this.colorsEdit = `background-color: ${this.cardColorEdit}; color: ${this.textColorEdit}`
+      let pick = document.getElementById("card-color-picker")
+      this.cardColorEdit = pick.value
+    },
+    changeTextColor(){
+      let pick = document.getElementById("text-color-picker")
+      this.textColorEdit = pick.value
     },
     deleteCard(e) {
       let deleteConfirm = confirm('Are you sure you want to delete this card?')
@@ -216,7 +207,6 @@ export default {
       }
     },
     editCard(e) {
-      this.keyEdit = this.id
       this.idEdit = this.id
       this.subjectEdit = this.subject
       this.emailEdit = this.email
@@ -227,9 +217,8 @@ export default {
       this.colorsEdit = this.colors
       this.editMode = true
     },
-    saveCard(e) {
+    saveCard() {
       this.editMode = false
-      const key = this.keyEdit
       const id = this.idEdit
       const subject = this.subjectEdit
       const email = this.store.state.user.email
@@ -246,7 +235,6 @@ export default {
         userID,
         subject,
         id,
-        key,
         email,
         front,
         back,
@@ -255,11 +243,11 @@ export default {
         textColor,
         cardColor,
       }
+      // console.log(details)
       this.store.dispatch('editCard', details)
     },
     cancelEdit() {
       this.editMode = false
-      this.keyEdit = null
       this.idEdit = null
       this.subjectEdit = null
       this.emailEdit = null
@@ -268,14 +256,6 @@ export default {
       this.colorsEdit = null
       this.cardColorEdit = null
       this.textColorEdit = null
-    },
-    fullFiew(subject, email, front, back, id, style){
-      this.fullsubject = subject ;
-      this.fullemail = email;
-      this.fullfront = front;
-      this.fullback = back;
-      this.fullid = id;
-      // console.log(style)
     }
   },
 }
@@ -391,7 +371,7 @@ export default {
 .rotate-image-icon-edit {
   width: 45px;
   height: 20px;
-  margin-top: 5px;
+  /* margin-top: 5px; */
 }
 
 .edit-card__options {
@@ -423,17 +403,17 @@ export default {
 
 .delete-icon {
   width: 25px;
-  margin-top: 5px;
+  /* margin-top: 5px; */
 }
 
 .card-controller {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  left: 5%;
-  top: 3%;
-  width: 350px;
-  margin-top: 15px;
+  width: 400px;
+  height: 50px;
+  margin-top: 25px;
+  /* background-color: rgb(0, 4, 128); */
 }
 
 .card-controller button {
@@ -460,7 +440,6 @@ export default {
 
 .cancel-icon {
   width: 25px;
-  left: 60%;
 }
 
 .save-icon {
@@ -471,22 +450,16 @@ export default {
 .card-color-picker,
 .cards-image,
 .text-image {
-  position: fixed;
   height: 25px;
 }
 
-.text-image,
+
 .text-color-picker {
-  position: fixed;
-  left: 30%;
-  margin-top: 5px;
+  left: 13%;
 }
 
-.cards-image,
 .card-color-picker {
-  position: fixed;
-  left: 47%;
-  margin-top: 5px;
+  left: 25%;
 }
 
 .card-edit-menu {
