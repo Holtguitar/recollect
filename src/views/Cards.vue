@@ -192,7 +192,6 @@ export default {
   height: 100px;
   width: 250px;
   border-radius: 5%;
-  /* background-color: rgb(11, 214, 146); */
   background-color: #107a57;
   left: 40%;
   top: 12%;
@@ -246,7 +245,6 @@ export default {
 
 .card-holder {
   position: absolute;
-  /* background-color: red; */
   left: 20%;
 }
 
@@ -255,7 +253,6 @@ export default {
   position: absolute;
   width: 35px;
   top: 45%;
-  /* background-color: yellow; */
 }
 
 .left-arrow {
@@ -268,7 +265,6 @@ export default {
 
 .left-arrow:active,
 .right-arrow:active {
-  /* background-color: grey; */
   transform: scale(0.89);
 }
 
@@ -357,20 +353,6 @@ input:checked + .slider:before {
     left: 0%;
   }
 
-  .card-scroll-single {
-    /* position: fixed;
-    top: 23%;
-    height: 40%;
-    width: 120%;
-    left: 0%;
-    justify-content: space-between !important; */
-    /* height: 40vh; */
-    /* width: 100; */
-    /* padding-left: 0%; */
-    /* left: 0%; */
-    /* background-color: red;
-    margin-left: -20%; */
-  }
 
   .left-arrow,
   .right-arrow {
@@ -409,34 +391,5 @@ input:checked + .slider:before {
     
   }
 
-  /* Slider */
-  .slide-mode {
-    /* position: fixed;
-    top: 13%;
-    left: 62%;
-    width: 80px;
-    text-align: center; */
-  }
-  .switch {
-    /* margin-top: 15px;
-    display: inline-block; */
-  }
-
-  .slide-mode {
-    /* font-size: 10px;
-    height: 75px; */
-  }
-
-  .slider:before {
-    /* position: absolute;
-    content: ''; */
-    /* height: 26px; */
-    /* width: 26px; */
-    /* left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: 0.4s;
-    transition: 0.4s; */
-  }
 }
 </style>

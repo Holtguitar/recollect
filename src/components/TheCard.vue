@@ -243,7 +243,6 @@ export default {
         textColor,
         cardColor,
       }
-      // console.log(details)
       this.store.dispatch('editCard', details)
     },
     cancelEdit() {
@@ -263,11 +262,7 @@ export default {
 
 <style scoped>
 /* ------------------CARD STYLE--------------------- */
-/* Base */
-
 .scene {
-  /* width: 400px; */
-  /* height: 260px; */
   margin: 40px 0;
   perspective: 600px;
 }
@@ -371,7 +366,6 @@ export default {
 .rotate-image-icon-edit {
   width: 45px;
   height: 20px;
-  /* margin-top: 5px; */
 }
 
 .edit-card__options {
@@ -384,9 +378,6 @@ export default {
   margin-top: 5px;
 }
 
-#rotate-card {
-  /* left: 45%; */
-}
 
 #rotate-card:hover {
   cursor: pointer;
@@ -403,7 +394,6 @@ export default {
 
 .delete-icon {
   width: 25px;
-  /* margin-top: 5px; */
 }
 
 .card-controller {
@@ -413,7 +403,6 @@ export default {
   width: 400px;
   height: 50px;
   margin-top: 25px;
-  /* background-color: rgb(0, 4, 128); */
 }
 
 .card-controller button {
@@ -455,7 +444,6 @@ export default {
 
 
 .card-color-edit, .text-color-edit {
-  /* background-color: red; */
   width: 40px;
   display: grid;
 }
@@ -505,101 +493,21 @@ export default {
   .card {
     width: 300px;
     height: 195px;
-    /* left: 11%; */
     transition: transform 1s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
   .scene {
-    /* background-color: red; */
     width: 300px;
     left: 10%;
   }
 
   /* ---------CARD CONTROLLER STYLE-------------- */
 
-  /* Base */
-
-  .rotate-image-icon {
-    /* width: 30px;
-    height: 15px;
-    margin-top: 5px; */
-  }
-
-  .edit-icon {
-    /* width: 15px; */
-  }
-
-  .delete-icon {
-    /* width: 15px; */
-  }
-
   .card-controller {
-    /* position: fixed; */
-    /* top: 100%; */
-    /* margin-top: 15px; */
     width: 300px;
-    /*left: 25%; */
-    /* background-color: red; */
-    /* left: 10%; */
   }
 
-  /* Edit Mode */
-
-  .rotate-image-icon-edit {
-    /* width: 30px;
-    height: 15px; */
-    /* margin-top: 5px; */
-  }
-
-  .cancel-icon {
-    /* width: 15px; */
-    /* left: 60%;
-    margin-top: 2px; */
-  }
-
-  .save-icon {
-    /* width: 20px; */
-  }
-
-  .scene .text-color-picker,
-  .card-color-picker,
-  .cards-image,
-  .text-image {
-    /* height: 15px; */
-  }
-
-  .text-image,
-  .text-color-picker {
-    /* left: 38%;
-    margin-top: 5px; */
-  }
-
-  .cards-image,
-  .card-color-picker {
-    /* left: 49%;
-    margin-top: 7px; */
-  }
-
-  .card-edit-menu {
-    /* position: fixed;
-    display: flex;
-    flex-direction: column;
-    height: 250px;
-    width: 200px;
-    right: 0vw;
-    top: 10%; */
-  }
-
-  .text-color-picker {
-    /* position: fixed;
-    opacity: 0; */
-  }
-
-  .card-color-picker {
-    /* position: fixed;
-    opacity: 0; */
-  }
 }
 </style>
