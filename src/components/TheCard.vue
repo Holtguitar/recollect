@@ -454,12 +454,29 @@ export default {
 }
 
 
-.text-color-picker {
-  left: 16%;
+.card-color-edit, .text-color-edit {
+  /* background-color: red; */
+  width: 40px;
+  display: grid;
+}
+
+.text-color-picker, .text-image {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.card-color-picker, .cards-image {
+  grid-column: 1;
+  grid-row: 1;
+}
+.text-color-picker{
+  opacity: 0;
+  width: 40px;
 }
 
 .card-color-picker {
-  left: 31.5%;
+  opacity: 0;
+  width: 40px
 }
 
 .card-edit-menu {
@@ -475,16 +492,6 @@ export default {
   top: 10%;
 }
 
-.text-color-picker {
-  position: fixed;
-  opacity: 0;
-}
-
-.card-color-picker {
-  position: fixed;
-  opacity: 0;
-}
-
 .card-controller button:hover {
   cursor: pointer;
 }
@@ -498,10 +505,16 @@ export default {
   .card {
     width: 300px;
     height: 195px;
-    left: 11%;
+    /* left: 11%; */
     transition: transform 1s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .scene {
+    /* background-color: red; */
+    width: 300px;
+    left: 10%;
   }
 
   /* ---------CARD CONTROLLER STYLE-------------- */
@@ -509,82 +522,84 @@ export default {
   /* Base */
 
   .rotate-image-icon {
-    width: 30px;
+    /* width: 30px;
     height: 15px;
-    margin-top: 5px;
+    margin-top: 5px; */
   }
 
   .edit-icon {
-    width: 15px;
+    /* width: 15px; */
   }
 
   .delete-icon {
-    width: 15px;
+    /* width: 15px; */
   }
 
   .card-controller {
     /* position: fixed; */
     /* top: 100%; */
     /* margin-top: 15px; */
-    width: 200px;
-    left: 25%;
+    width: 300px;
+    /*left: 25%; */
+    /* background-color: red; */
+    /* left: 10%; */
   }
 
   /* Edit Mode */
 
   .rotate-image-icon-edit {
-    width: 30px;
-    height: 15px;
-    margin-top: 5px;
+    /* width: 30px;
+    height: 15px; */
+    /* margin-top: 5px; */
   }
 
   .cancel-icon {
-    width: 15px;
-    left: 60%;
-    margin-top: 2px;
+    /* width: 15px; */
+    /* left: 60%;
+    margin-top: 2px; */
   }
 
   .save-icon {
-    width: 20px;
+    /* width: 20px; */
   }
 
   .scene .text-color-picker,
   .card-color-picker,
   .cards-image,
   .text-image {
-    height: 15px;
+    /* height: 15px; */
   }
 
   .text-image,
   .text-color-picker {
-    left: 38%;
-    margin-top: 5px;
+    /* left: 38%;
+    margin-top: 5px; */
   }
 
   .cards-image,
   .card-color-picker {
-    left: 49%;
-    margin-top: 7px;
+    /* left: 49%;
+    margin-top: 7px; */
   }
 
   .card-edit-menu {
-    position: fixed;
+    /* position: fixed;
     display: flex;
     flex-direction: column;
     height: 250px;
     width: 200px;
     right: 0vw;
-    top: 10%;
+    top: 10%; */
   }
 
   .text-color-picker {
-    position: fixed;
-    opacity: 0;
+    /* position: fixed;
+    opacity: 0; */
   }
 
   .card-color-picker {
-    position: fixed;
-    opacity: 0;
+    /* position: fixed;
+    opacity: 0; */
   }
 }
 </style>
