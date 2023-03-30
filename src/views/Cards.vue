@@ -138,11 +138,6 @@ export default {
       console.log("Full View")
     }
   },
-  created(){
-    window.addEventListener('afterprint', function(){
-      console.log("Refreshed")
-    })
-  },
   beforeMount(){
 
   },

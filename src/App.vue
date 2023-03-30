@@ -15,7 +15,7 @@
     components: {
       TheNavigationBarVue,
       TheFooter
-    }
+    },
   }
 </script>
 

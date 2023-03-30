@@ -455,11 +455,11 @@ export default {
 
 
 .text-color-picker {
-  left: 13%;
+  left: 16%;
 }
 
 .card-color-picker {
-  left: 25%;
+  left: 31.5%;
 }
 
 .card-edit-menu {
